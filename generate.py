@@ -30,8 +30,8 @@ def eprint(*args, **kwargs):
 
 def fatal(msg):
     """ Print a fatal error and quit """
-	eprint("[!] {}".format(msg))
-        sys.exit(1)
+    eprint("[!] {}".format(msg))
+    sys.exit(1)
 	
 	
 def clsid_to_hex(data):
