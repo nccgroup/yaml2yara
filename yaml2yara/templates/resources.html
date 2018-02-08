@@ -1,0 +1,16 @@
+{% import 'helpers.html' as helpers -%}
+{% extends "base.html" %}
+{% block imports %}
+import "pe"
+import "hash"
+{% endblock %}
+
+{% block condition %}
+    for any i in (0..pe.number_of_resources - 1):
+    (
+    {%- for hash in item.hash|sort %}
+      (hash.sha256(pe.resources[i].offset, pe.resources[i].length) == "{{ hash }}") 
+        {%- if not loop.last %} or{% endif -%}
+    {% endfor %}
+    )
+{% endblock %}

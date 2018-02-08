@@ -1,0 +1,130 @@
+# This file contains icons frequently seen used by malware.
+#
+# To compile the initial file I chose icons used in a high number of
+# samples (e.g. fake Adobe Flash player updates) and those which 
+# should never be used by an executable (e.g. Word Document icons).
+#
+# Note these are not all necessarily malicious.  NSIS installers and 
+# RAR archives are perfectly good uses of executable files!
+
+picture_icon:
+    added_by: David Cannings
+    description: Icon looks like a picture file
+    hash:
+        - 32d5f5f3228c1bfd1df68af222a1f186
+        - 3468c535ee649017775ff3e4485b6288
+        - 360e0deb81fe8e135a0414f9e4b1b1f4
+        - 376cc20009dadb65c9d0199248148495
+        - 6f007bf13b5cce45ea9751db29aa77f2
+        - 720e58813013b450d74afd2e8cf2cbd6
+        - 781bf3cf2fe5f1c976fce99863bde5ec
+        - e0affc0388e04826309a64a6c8c952a6
+
+lanfiltrator_icon:
+    added_by: David Cannings
+    description: Icon from the Lanfiltrator malware
+    hash:
+        - 67cffb14e434526c453e04be5e3a908d
+        - 97506f2349fc4276ec7566c77951214b
+
+word_icon:
+    added_by: David Cannings
+    description: Icon looks like a Microsoft Word document
+    hash:
+        - 137f549d5ca7b9fbe85d17c2cde1947d
+        - 1899bcc2d01cf773f8de7d36d4cf71be
+        - 30834ec3cf0fa7f523dcbacfcb29f96b
+        - 64580af1e3b4739e5fb8ec58b79ee7f8
+        - 87296f8f8be3838bd1578cc933115352
+        - a1fe17d347b1156212cdc11e9007b60c
+        - c618c9640e539622e4a3789e801b1867
+        - e4d0a554ccb5bc70ae04708bae42290b
+        - fcc3b023cb0ef6694b74bcdc456d52b4
+
+excel_icon:
+    added_by: David Cannings
+    description: Icon looks like a Microsoft Excel document
+    hash:
+        - 0eb92d7392ee79adeae9fb6dd79369bd
+        - 11e050fa9184385d5d3eaead0028c659
+        - 5ee01927605e4703cee0f2e5d5812b90
+        - 7bd38937d4711b70b0b985f4f07fe8fd
+        - 86b067a58c669bf96610a854c15d2832
+        - bef052a836721603944223065df03278
+        - c71d2b63fbe3f38bba270a74853c64b4
+        - de40ecff2f08541e4a5a0d94470ffe86
+        - de6ad028f9014f7d62c3939eba34c995
+
+powerpoint_icon:
+    added_by: David Cannings
+    description: Icon looks like a Microsoft Powerpoint document
+    hash:
+        - 0faab9105319c78cbcbf513c44264717
+        - 1b2c01b50b525cb3bd29fa4977d2f94f
+        - 36e26f21f8b78411ad8a882a8e355fbc
+        - 441ed48614c47f8e84425d6eb7bc0443
+        - 4a7e819311988977b2eafb89e22db78e
+        - 4ceeaab17956c1a76b436e09bb601129
+        - 85c77f3bf33a083be1574f16025f311f
+        - b10c0f2ba9becfb38e81ddb6db98dc5a
+        - cd44986dcb0c9e828d84ff7886c97a76
+
+generic_doc_icon:
+    added_by: David Cannings
+    description: Icon looks like a generic Office document
+    hash:
+        - 022cf931375284674e8efa021c6dbf89
+        - 082d902e9dac4a611abeb5e5254031dd
+        - 315a487481d78010d269378be16b8e5b
+        - 363e8b9515d82e4eec37f54756aaefe7
+        - 408e3453e2839ab43e6cfb7e5b32836f
+        - 4d6f1cb813db90e55a89f8b1cc20a7c7
+        - 5a2ed703d2b737b809e616ec65886ba5
+        - c5e35166cb10e362132963d8a8053827
+        - eec0d743689769c365450aed5e131c16
+
+pdf_icon:
+    added_by: David Cannings
+    description: Icon looks like an Adobe Acrobat PDF
+    hash:
+        - 07719e9a1bfe3bdb00653c03c9646064
+        - 157e93f142da0938bdfbec079b473809
+        - 1daffb0d65ab793fafce375e6f8c93c4
+        - b0681b3b4f35d66f842ec45712278844
+        - ba94ca63109ce80f7ff07f8b32f48bad
+        - baca0bd675b44b8db1263e690e15acbe
+        - bca790b2bd380d03c12f6db36844201b
+        - f9130bc5914f37d08883508b0e569659
+        - e0ae31d8a36f6d871e02beddb28f9991
+        - 21760bb3ca58573d00fcabd28e89483e
+
+winrar_icon:
+    added_by: David Cannings
+    description: Icon looks like a WinRAR archive
+    hash:
+        - 1f9620bbff17ddebb3f850ead9bc016f
+        - 2b15ab8515848243b12d928ef15cc8bc
+        - 3c55ffb3d78eb6f96af32ffaed057779
+        - b524cff7507513c7b0e86629347056ee
+        - 41491a39d90ed5934e44c6a505f15ee5
+        - de81bccb6410c9e4acb325f67f268bc5
+        - e9356775b7b8159cfad335fa2c2b22d5
+
+nsis_icon:
+    added_by: David Cannings
+    description: Icon looks like an NSIS installer
+    hash:
+        - 0ec0a0948a526b9c7eebe39bb02b6b0b
+        - 6b224e01af48ec8e4c17a59d9534e885
+        - d9ee3a2962251a241bce41b0524cfc0e
+        - ca82d899b1d402941b5c92ed9028cd95
+
+
+folder_icon:
+    added_by: David Cannings
+    description: Icon looks like an Explorer folder
+    hash:
+        - ab44cba7fc88c86cae78d18616ba83e6
+        - ab18205aa448ea37f42d29fd693bb1ae
+        - e8f7620c5428108ed857933621be0178
+        - 7e8ed20b06ec05773b6a9b43860375f4

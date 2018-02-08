@@ -1,0 +1,38 @@
+{% macro make_tags(tags) -%}
+  {%- if tags %} : 
+    {%- for tag in tags|sort %} {{ tag }}{%- endfor -%}
+  {% endif %}
+{%- endmacro %}
+
+{% macro rule_name(name, prefix, item, tags) -%}
+  rule {% if prefix %}{{ prefix }}_{% endif %}{{ name }}{{ make_tags(item.tags) }}
+{%- endmacro %}
+
+{% macro meta(item) %}
+  {{- add_meta('author', item.added_by) -}}
+  {{ add_meta('description', item.description) -}}
+  {{ add_meta('ref', item.ref) -}}
+  {{ add_meta('generated_by', 'yaml2yara, see https://github.com/nccgroup/yaml2yara/') -}}
+{% endmacro %}
+
+{% macro add_hex(name, value) %}
+  {#- Only output the condition if the value is set -#}
+  {%- if value %}
+    ${{ name }} = { {{ value }} }
+  {%- endif -%}
+{% endmacro %}
+
+{% macro add_str(name, value, modifiers) %}
+  {#- Only output the condition if the value is set -#}
+  {%- if value %}
+    ${{ name }} = "{{ value }}" {{ modifiers }}
+  {%- endif -%}
+{% endmacro %}
+
+{% macro add_meta(name, value) %}
+  {#- Only output meta information if the value is set -#}
+  {%- if value %}
+    {{ name }} = "{{ value }}"
+  {%- endif -%}
+{% endmacro %}
+

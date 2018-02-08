@@ -1,0 +1,14 @@
+{% import 'helpers.html' as helpers -%}
+{% extends "base.html" %}
+
+{% block strings %}
+
+  strings:
+    {{- helpers.add_hex('serial', item.serial|replace(':', ' ')) -}}
+    {{ helpers.add_str('subject', item.subject, 'wide ascii') -}}
+    {{ helpers.add_str('issuer', item.issuer, 'wide ascii') }}
+{% endblock %}
+
+{% block condition %}
+    all of them
+{% endblock %}

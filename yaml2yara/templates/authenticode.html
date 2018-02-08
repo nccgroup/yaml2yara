@@ -1,0 +1,24 @@
+{% import 'helpers.html' as helpers -%}
+{% extends "base.html" %}
+{% macro condition(field, condition, value, out) -%}
+  {%- if out %}{{ out }}{% endif -%}
+  {#- Only output the condition if the value is set -#}
+  {%- if value %}
+    {#- Is there a previous condition? -#}
+    {%- if out %}and {% endif -%}
+    pe.signatures[i].{{ field }} {{ condition }} "{{ value }}"
+  {% endif -%}
+{%- endmacro -%}
+{% block imports %}
+import "pe"
+{% endblock %}
+
+{% block condition %}
+    for any i in (0..pe.number_of_signatures - 1):
+    (
+      {% set out = condition('serial', "==", item.serial, "") -%}
+      {% set out = condition('subject', "contains", item.subject, out) -%}
+      {% set out = condition('issuer', "contains", item.issuer, out) -%}
+      {{ out }}
+    )
+{% endblock %}

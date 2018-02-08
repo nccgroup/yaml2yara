@@ -1,0 +1,68 @@
+kaspersky:
+    added_by: David Cannings
+    description: "Kaspersky certificate, legitimate but used in DLL planting attacks"
+    serial: 77:8b:d7:e8:bb:92:7c:a9:65:11:90:8a:d9:41:d0:28
+    subject: Kaspersky Lab
+
+fsecure:
+    added_by: David Cannings
+    description: "F-Secure certificate, legitimate but used in DLL planting attacks (e.g. PlugX)"
+    serial: 59:8b:48:92:bd:19:55:eb:9a:88:8f:f3:93:b8:52:37
+    subject: ST=Helsinki/L=Helsinki/O=F-Secure Corporation
+
+# Avoid FP on signed DLLs that hit other Yara rules
+cylance:
+    added_by: David Cannings
+    description: "Cylance certificate, used to sign Protect endpoint agent"
+    #serial: 16:61:fd:0e:5d:7e:52:ee:4c:1f:1a:44:cc:97:ed:cf
+    subject: O=Cylance, Inc.
+
+# TODO: All of these hackingteam certs are thumbprints NOT serials - find the originals
+hackingteam1:
+    added_by: David Cannings
+    description: "Hacking Team certificate"
+    serial: 2e:87:34:34:8c:03:39:0d:24:fa:f9:6e:86:bb:01:b3:9e:3a:d4:db
+
+hackingteam2:
+    added_by: David Cannings
+    description: "Hacking Team certificate"
+    serial: b7:c6:46:e3:a4:33:98:6e:16:5b:a4:5b:20:9d:a4:a2:c4:11:19:39
+
+hackingteam3:
+    added_by: David Cannings
+    description: "Hacking Team certificate"
+    serial: fd:c9:28:1a:b9:2d:4f:b8:5a:03:25:4d:cb:62:d1:c2:9a:80:3f:b1
+
+hackingteam4:
+    added_by: David Cannings
+    description: "Hacking Team certificate"
+    serial: 2a:1d:a6:dc:86:35:e6:c7:25:cc:cb:e6:c0:35:ee:c8:13:fb:eb:2e
+
+magicdesktop:
+    added_by: David Cannings
+    description: "Magic Desktop S&T certificate, has signed Zolsearch malware"
+    serial: 02:64:32:a0:ea:f1:d4
+    subject: Magic Desktop S&T Development Co., Ltd.
+
+ommoo:
+    added_by: David Cannings
+    description: "Ommoo certificate, has signed Zolsearch malware"
+    serial: 2b:16:4b:99:60:c1:7a:65:11:6c:44:6f:b3:66:b0:19
+    subject: contact@ommoo.net
+
+ammyy:
+    added_by: David Cannings
+    description: "Ammyy certificate, RDP software seen in IR cases"
+    subject: /O=Ammyy LLC/CN=Ammyy LLC
+
+ratiborus:
+    added_by: David Cannings
+    description: "Ratiborus certificate, signed Potentially Unwanted Software including Windows Activator (KMSAuto)"
+    subject: /CN=Ratiborus MSFree Inc
+    serial: 1e:b5:23:94:d7:a0:f7:80:4a:c8:f8:0d:76:13:95:91
+
+clearthink:
+    added_by: David Cannings
+    description: "ClearThink certificate, sign Potentially Unwanted Softare including BrowseFox"
+    subject: /O=ClearThink/CN=ClearThink
+
