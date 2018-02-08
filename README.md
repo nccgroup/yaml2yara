@@ -30,6 +30,12 @@ The aims are to:
  * Generate rules with minimal fuss.
  * Produce output which can be fed into your favourite source code management tool (Git, mercurial, etc.).
 
+# Dependencies
+
+All required dependencies can be installed using pip:
+
+     pip install -r Requirements.txt
+
 # Usage
 
 Some sample data files and templates are included in the repository.  Example usage:
