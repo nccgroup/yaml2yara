@@ -44,6 +44,6 @@ The output can also be modified with `--tag`, which will add [rule tags](http://
 
 A `--prefix` option is also available, which will name all rules:
 
-    ./generate.py --template office_exploits --prefix exploit_ --input sample_data/office_exploits/ole.yaml
+    ./generate.py --template office_exploits --prefix exploit --input sample_data/office_exploits/ole.yaml
 
 Help is available, see `./generate.py --help`.
