@@ -446,3 +446,9 @@ liveplex:
     description: "Used to sign zxshell"
     serial: 3f:55:42:e2:e7:1d:8d:b3:57:04:1c:9d:d4:5b:95:0a
     subject: O=LivePlex Corp
+
+whizzimo:
+    added_by: David Cannings
+    description: "Used to sign obfuscated Mimikatz (e.g. 2ef157a97e28574356e1d871abf75deca7d7a1ea662f38b577a06dd039dbae29)"
+    serial: 00:d3:50:ae:9f:f3:32:5e:43
+    subject: O=Whizzimo, LLC
