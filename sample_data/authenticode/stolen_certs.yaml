@@ -452,3 +452,45 @@ whizzimo:
     description: "Used to sign obfuscated Mimikatz (e.g. 2ef157a97e28574356e1d871abf75deca7d7a1ea662f38b577a06dd039dbae29)"
     serial: 00:d3:50:ae:9f:f3:32:5e:43
     subject: O=Whizzimo, LLC
+
+green_partnership:
+    added_by: David Cannings
+    description: "Used to sign Lazarus group malware"
+    serial: 50:29:da:ca:43:95:11:45:6d:9e:d8:15:37:03:f4:bc
+    subject: O=THE GREEN PARTNERSHIP LTD
+    
+corp8:
+    added_by: David Cannings
+    description: "Used to sign Lazarus group malware"
+    serial: 4c:75:75:69:2c:2d:06:51:03:1a:77:ab:49:22:4c:cc    
+    subject: O=CORP 8 LIMITED
+    
+1549_limited:
+    added_by: David Cannings
+    description: "Used to sign Lazarus group malware"
+    serial: 1c:7d:3f:6e:11:65:54:80:9f:49:ce:16:cc:b6:2e:84
+    subject: O=1549 LIMITED
+
+cybasics:
+    added_by: David Cannings
+    description: "Used to sign Lazarus group malware"
+    subject: O=CYBASICS LTD
+    serial: 00:bb:ae:27:7a:c3:d9:cf:3f:85:00:86:a3:14:e7:0a:d7
+    
+thesolutions:
+    added_by: David Cannings
+    description: "Used to sign Lazarus group malware"
+    subject: O=THEESOLUTIONS LTD
+    serial: 76:8d:dc:f9:ed:8d:16:a6:bc:77:45:1e:e8:8d:fd:90
+
+mikl_limited:
+    added_by: David Cannings
+    description: "Used to sign LockerGoga ransomware"
+    subject: O=MIKL LIMITED
+    serial: 3d:25:80:e8:95:26:f7:85:2b:57:06:54:ef:d9:a8:bf
+
+alisa_ltd:
+    added_by: David Cannings
+    description: "Used to sign LockerGoga ransomware"
+    subject: O=ALISA LTD
+    serial: 5d:a1:73:eb:1a:c7:63:40:ac:05:8e:1f:f4:bf:5e:1b
