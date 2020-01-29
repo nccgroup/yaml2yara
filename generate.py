@@ -54,7 +54,7 @@ def clsid_to_hex(data):
 
 def to_hex(data):
     """ Helper function, used inside jinja2 templates """
-    return hexlify(data)
+    return hexlify(data.encode("ascii"))
 
 
 def add_tags(rules, global_tags):
@@ -80,6 +80,7 @@ def main():
     parser.add_argument('--prefix', type=str, default="", help='prefix all rule names with a string')
     parser.add_argument('--template', type=str, help='template to use', required=True)
     parser.add_argument('--input', type=str, help='input data file', required=True)
+    parser.add_argument('--output', type=str, help='output Yara file', required=True)
     args = parser.parse_args()
 
     # Check input file exists
@@ -104,7 +105,7 @@ def main():
         fatal("Template not found: {}".format(args.template))
 
     with open (args.input, 'r') as fh:
-        rules = yaml.load(fh)
+        rules = yaml.load(fh, Loader=yaml.SafeLoader)
 
     # SCM friendly output, sort by rule name so that output
     # is consistent between runs.  This minimises diffs where
@@ -118,8 +119,9 @@ def main():
     if len(args.tag):
         add_tags(rules_sorted, args.tag)
 
-    # Print output directly to STDOUT
-    print(template.render(data=rules_sorted, prefix=args.prefix))
+    rules = template.render(data=rules_sorted, prefix=args.prefix)
+    with open(args.output, encoding='utf-8', mode="w") as fh:
+        fh.write(rules)
 
 
 if __name__ == "__main__":
