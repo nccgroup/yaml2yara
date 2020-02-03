@@ -54,7 +54,7 @@ def clsid_to_hex(data):
 
 def to_hex(data):
     """ Helper function, used inside jinja2 templates """
-    return hexlify(data.encode("ascii"))
+    return hexlify(data.encode("ascii")).decode("ascii")
 
 
 def add_tags(rules, global_tags):
@@ -104,7 +104,7 @@ def main():
     except TemplateNotFound:
         fatal("Template not found: {}".format(args.template))
 
-    with open (args.input, 'r') as fh:
+    with open (args.input, encoding='utf-8', mode='r') as fh:
         rules = yaml.load(fh, Loader=yaml.SafeLoader)
 
     # SCM friendly output, sort by rule name so that output
